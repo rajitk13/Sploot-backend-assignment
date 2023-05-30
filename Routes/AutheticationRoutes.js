@@ -60,8 +60,6 @@ router.post("/api/signup", async (req, res) => {
 router.post("/api/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log({ email, password });
-    console.log(req.body);
     // Validate inputs
     if (!email || !password) {
       return res.status(400).json({
